@@ -9,5 +9,7 @@ public class TestMood {
 
         Assertions.assertEquals("Sad Mood.", MoodAnalyser.analyserMood("I am in Sad  Mood."));
         Assertions.assertEquals("Happy Mood.",MoodAnalyser.analyserMood("I am in Any Mood"));
+
+        Assertions.assertEquals("Happy Mood.",MoodAnalyser.analyserMood("I am in null Mood"));
     }
 }
