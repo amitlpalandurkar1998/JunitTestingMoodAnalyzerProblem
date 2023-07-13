@@ -15,5 +15,8 @@ public class Main {
 
         String messageTC21 = "I am in null Mood";
         System.out.println("TC2.1 => " + MoodAnalyser.analyserMood(messageTC21));
+
+        String messageTC31 = "I am in Empty Mood";
+        System.out.println("TC3.1 => " + MoodAnalyser.analyserMood(messageTC31));
     }
 }
