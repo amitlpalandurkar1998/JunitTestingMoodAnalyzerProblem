@@ -4,10 +4,12 @@ public class MoodAnalyser {
 
     public static String analyserMood(String message) {
         String mood = null;
-        try{
-            if (message.toLowerCase().contains("null")){
+        try {
+            if (message.toLowerCase().contains("null")) {
                 throw new Exception("Invalid Mood.");
-            }else {
+            } else if (message.toLowerCase().contains("Empty")) {
+                throw new Exception("Invalid Mood.(Empty)");
+            } else {
                 if (message.toLowerCase().contains("sad")) {
                     mood = "Sad Mood.";
                 }
@@ -18,9 +20,9 @@ public class MoodAnalyser {
                     mood = "Happy Mood.";
                 }
             }
-        }catch (Exception m){
-            mood="Happy Mood.";
-            System.out.println("Error: "+m.getMessage());
+        } catch (Exception m) {
+            mood = "Happy Mood.";
+            System.out.println("Error: " + m.getMessage());
         }
         return mood;
     }
